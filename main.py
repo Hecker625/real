@@ -1,7 +1,7 @@
 from datetime import datetime
 from flask import Flask, request, render_template
 from flask import send_file
-from flask-cors import CORS
+from flask_cors import CORS
 import zoneinfo, requests
 
 # Pacific Time
