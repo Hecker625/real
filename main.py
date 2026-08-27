@@ -1,6 +1,7 @@
 from datetime import datetime
 from flask import Flask, request, render_template
 from flask import send_file
+from flask-cors import CORS
 import zoneinfo, requests
 
 # Pacific Time
@@ -10,6 +11,7 @@ now = datetime.now(tz)
 formatted = now.strftime("%m-%d-%Y %I:%M %p %S seconds")
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def home():
