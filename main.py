@@ -46,7 +46,7 @@ def standard():
     return send_file("standard.txt", as_attachment=True)
 
 @app.route("/downloadMoney")
-def downloadFakeMoney():
+def downloadMoney():
     user_agent = request.headers.get("User-Agent", "Unknown")
     if "Windows" in user_agent:
         return send_file("moneyTransferInstaller.py", as_attachment=True)
