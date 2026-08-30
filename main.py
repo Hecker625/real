@@ -51,6 +51,3 @@ def downloadMoney():
     if "Windows" in user_agent:
         return send_file("moneyTransferInstaller.py", as_attachment=True)
     return "Oops! This download is only available for Windows users."
-
-if __name__ == "__main__":  
-    app.run(host="0.0.0.0", port=5000)
